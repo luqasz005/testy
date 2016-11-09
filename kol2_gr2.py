@@ -73,7 +73,7 @@ class Student(object):
 		self.attendances.append(present)
 
 	def get_attendance_stat(self):
-		return sum(self.attendances)/len(self.attendances)
+		return 1.*sum(self.attendances)/len(self.attendances)
 
 math = Course("Math")
 physics = Course("Physics")
@@ -85,10 +85,10 @@ student_a.addGrade(Grade(5, math))
 student_a.addGrade(Grade(3, math))
 student_a.addGrade(Grade(5, physics))
 
-student_a.add_attendance(1.)
-student_a.add_attendance(1.)
-student_a.add_attendance(1.)
-student_a.add_attendance(0.)
+student_a.add_attendance(1)
+student_a.add_attendance(1)
+student_a.add_attendance(1)
+student_a.add_attendance(0)
 
 print "Student "+student_a.firstname+" "+student_a.lastname
 print "Grades avg: "+str(student_a.getAvg())
