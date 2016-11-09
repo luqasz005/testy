@@ -48,11 +48,10 @@ class Student(object):
 		gradesSum = 0.
 		gradesCnt = len(self.grades)
 
-		for grade in self.grades:
-			gradesSum += grade.value
-
-
 		if gradesCnt:
+			for grade in self.grades:
+				gradesSum += grade.value
+
 			return gradesSum/gradesCnt
 		return 0
 
